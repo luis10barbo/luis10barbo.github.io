@@ -17,10 +17,22 @@ body {
 :root {
   /* Colors */
   --clr-main: rgb(117, 0, 172);
+  --clr-main-dark: rgb(87, 0, 128);
 
-  --clr-primary: rgb(43, 43, 43);
+  --clr-primary-light: rgb(60, 60, 60);
+  --clr-primary: rgb(40, 40, 40);
+  --clr-primary-dark: rgb(20, 20, 20);
+  --clr-primary-darker: rgb(10, 10, 10);
 
   --clr-complementary: rgb(255, 255, 255);
+  --clr-complementary-dark: rgb(220, 220, 220);
+  --clr-complementary-dark: rgb(220, 220, 220);
+
   /* Borders */
   --border-small: 0.5rem;
+
+  /* Transition */
+  --transition-fast: 150ms;
+  --transition-medium: 300ms;
+  --transition-slow: 450ms;
 }
