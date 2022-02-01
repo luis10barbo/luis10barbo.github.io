@@ -1,0 +1,72 @@
+body {
+  background-color: var(--clr-primary);
+
+  font-size: 2em;
+}
+
+#page-title {
+  font-size: 2.5em;
+  /* border-radius: var(--border-small); */
+
+  margin-bottom: 3rem;
+
+  padding: 1.5rem;
+
+  font-weight: 600;
+
+  text-transform: uppercase;
+  text-align: center;
+
+  background-color: var(--clr-main);
+  color: var(--clr-complementary);
+}
+
+main {
+  width: fit-content;
+
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+
+  text-align: center;
+
+  gap: 3rem;
+}
+
+.main-title {
+  color: var(--clr-complementary);
+  margin-bottom: 2rem;
+  font-weight: 300;
+  font-size: 0.75em;
+}
+
+.main-grid {
+  margin-left: auto;
+  margin-right: auto;
+
+  width: fit-content;
+  display: grid;
+
+  grid-template-columns: 1fr 1fr 1fr;
+
+  gap: 2rem;
+}
+
+.card {
+  margin-left: auto;
+  margin-right: auto;
+
+  background-color: var(--clr-complementary);
+
+  border-radius: var(--border-small);
+
+  height: 15rem;
+  width: 15rem;
+}
+
+.card:hover {
+  background-color: var(--clr-main);
+
+  cursor: pointer;
+}

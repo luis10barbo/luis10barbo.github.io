@@ -1,0 +1,174 @@
+<head>
+    <link href="styles/main.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles/dimmed-screen.css">
+    <script src="script.js"></script>
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">  
+    <meta name="viewport" content="width=device-width" />
+</head>
+<body id="body">
+    <div id="save-wrapper">
+        <div class="container">
+            <span>SELECIONE OS ELEMENTOS PARA SALVAR UM VALOR PADRÃO:</span>
+            <div class="wrapper">
+                <div class="content" id="boggers1">
+                </div>
+                <div class="separator"></div>
+                <div class="content" id="boggers2">
+                </div>
+            </div>
+            <div class="final-buttons">
+                <div class="circle-item" id="save-cancel-button">
+                    <img src="/svgs/cross.png" alt="" width="50px">
+                </div>
+                <div class="circle-item" id="save-confirm-button">
+                    <img src="/svgs/check.png" alt="" width="42px">
+                </div>
+            </div>
+        </div>
+    </div>
+    <header>
+        <div class="left-container">
+            <img src="svgs/4fun-icon.png" alt="" width="110px">
+            <span></span>
+        </div>
+        <div class="right-container">
+            <div class="item">
+                <div class="circle-item" >
+                    <a href="https://www.youtube.com/channel/UCN6PPgD-o6_TUOp1eKD61gQ">
+                        <img src="svgs/youtube.png" alt="" width="71">
+                    </a>
+                </div>
+            </div>
+            <div class="item">
+                <div class="circle-item" >
+                    <a href="https://www.discord.gg/WdwcX9Z">
+                        <img src="svgs/discord.png" alt="" width="71">
+                    </a>
+                </div>
+            </div>
+            <div class="item">
+                <div class="circle-item" id="dark-light-button">
+                    <img id="night-mode-png" src="svgs/night-mode-switch-b.png" alt="" width="71px">
+                    <img id="light-mode-png" src="svgs/light-mode-switch.png" alt="" width="71px">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div id="input-items-wrapper">
+            <div class="item">
+                <span>ID DO DISCORD</span>
+                <div id="input-1-error-box" class="error-box"><span id="input-1-error-span"></span></div>
+                <div id="input-1-box"class="input-box">
+                    <input type="text" id="input-1" onblur="checkDiscordId()">
+                    <div class="reset-button-input" id="input-1-reset"></div>
+                </div>
+            </div>
+            <div class="item">
+                <span>LINK DO PERFIL NO OSU!</span>
+                <div id="input-2-error-box" class="error-box"></div>
+                <div id="input-2-box" class="input-box">
+                    <input type="text" id="input-2" onblur="checkProfileDomain()">
+                    <div class="reset-button-input" id="input-2-reset"></div>
+                </div>
+            </div>
+            <div class="item">
+                <span>LINK DO MAPA NO OSU!</span>
+                <div id="input-3-error-box" class="error-box"></div>
+                <div id="input-3-box" class="input-box">
+                    <input type="text" id="input-3" onblur="checkBeatmapDomain()">
+                    <div class="reset-button-input" id="input-3-reset"></div>
+                </div>
+            </div>
+            <div class="item">
+                <span>SKIN</span>
+                <div id="input-4-error-box" class="error-box"></div>
+                <div class="input-box" id="input-4-box">
+                    <input type="text" id="input-4"> 
+                    <div class="reset-button-input" id="input-4-reset"></div>
+                </div>
+                <div id="input-4-dropdown">
+                    <div class="wrapper">
+                        <div id="skin-selector" onclick="">
+                            <div class="selection">
+                                <div class="name-box">
+                                    <div class="wrapper">
+                                        <span>SKIN NOME LALALALAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAASQDq</span> 
+                                    </div>
+                                </div>
+                                <img src="https://osu.ppy.sh/ss/16966754/eea2" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="advanced-options-wrapper" >
+                <div class="button-wrapper" id="advanced-options-button">
+                    <span>OPÇÕES AVANÇADAS</span>
+                    <img id="advanced-options-arrow" src="svgs/Arrow.svg" alt="" width="20px">
+                </div>
+                <div id="advanced-options-dropdown">
+                    <div class="content">
+                        <div class="item">
+                            <label class="checkbox-container"><input type="checkbox" id="beatmap-hitsound-check"><span class="checkmark"></span></label>
+                            <span>USAR HITSOUNDS DO BEATMAP</span>
+                        </div>
+                        <div class="item">
+                            <label class="checkbox-container"><input type="checkbox" id="hit-lightning-check"><span class="checkmark"></span></label>
+                            <span>USAR ILUMINAÇÃO DE HIT</span>
+                        </div>
+                        <div class="item">
+                            <label class="checkbox-container"><input type="checkbox" id="beatmap-colors-check"><span class="checkmark"></span></label>
+                            <span>USAR CORES DE COMBO DO MAPA</span>
+                        </div>
+                        <div class="item">
+                            <label class="checkbox-container"><input type="checkbox" id="followpoints-check"><span class="checkmark"></span></label>
+                            <span>DESENHAR FOLLOW POINTS</span>
+                        </div>
+                        <div class="item">
+                            <label class="checkbox-container"><input type="checkbox" id="animated-sliders-check"><span class="checkmark"></span></label>
+                            <span>USAR SLIDERS ANIMADOS</span>
+                        </div>
+                        <div class="item">
+                            <label class="checkbox-container"><input type="checkbox" id="dynamic-cursor-size-check"><span class="checkmark"></span></label>
+                            <span>USAR TAMANHO DE CURSOR DINAMICO</span>
+                        </div>
+                        <div class="item">
+                            <label class="checkbox-container"><input type="checkbox" id="storyboards-check"><span class="checkmark"></span></label>
+                            <span>ATIVAR STORYBOARDS</span>
+                        </div>
+                    </div>
+                    <div class="separator"></div>
+                    <div class="content">
+                        <div class="item column">
+                            <span>TAMANHO DO CURSOR</span>
+                            <span id="cursor-size-span">1x</span>
+                            <input id="cursor-size-slider" type="range" min="0" max="200" value="100" class="custom-slider">
+                        </div>
+                        <div class="item column">
+                            <span>ESCURECER FUNDO</span>
+                            <span id="background-dim-span">90%</span>
+                            <input id="background-dim-slider" type="range" min="0" max="100" value="90" class="custom-slider">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="final-buttons">
+                <div class="circle-item" id="reset-button">
+                    <img src="/svgs/reset.png" alt="" width="50px">
+                </div>
+                <div class="circle-item" id="save-button">
+                    <img src="/svgs/save-icon.png" alt="" width="50px">
+                </div>
+                <div class="circle-item" id="send-button">
+                    <img src="/svgs/check.png" alt="" width="42px">
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer></footer>
+</body>
