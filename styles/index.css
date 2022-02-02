@@ -40,14 +40,14 @@ main {
 .main-title {
   color: var(--clr-complementary);
   margin-bottom: 2rem;
-  font-weight: 300;
-  font-size: 0.75em;
+  font-weight: 100;
+  font-size: 0.6em;
 }
 
 /* Main Grid */
 .grid-container {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   flex-direction: column;
   gap: 2rem;
 }
@@ -82,6 +82,61 @@ main {
 
   height: 15rem;
   width: 15rem;
+}
+.card::before {
+  position: absolute;
+  z-index: 10;
+
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0);
+
+  transition: background-color var(--transition-fast);
+}
+.card:hover::before {
+  background-color: rgba(0, 0, 0, 0.75);
+}
+
+.card-open-project {
+  --l-color: white;
+  --l-color-complementary: black;
+
+  position: absolute;
+  content: "Abrir Projeto";
+
+  width: fit-content;
+  height: fit-content;
+
+  margin: auto;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+
+  font-size: 0.5em;
+  font-weight: 600;
+
+  padding: 0.5rem;
+
+  color: var(--l-color);
+  border: 0.15rem solid var(--l-color);
+
+  border-radius: var(--border-small);
+
+  cursor: pointer;
+
+  z-index: 20;
+
+  transition: color var(--transition-fast),
+    background-color var(--transition-fast);
+}
+.card-open-project:hover {
+  background-color: var(--l-color);
+  color: var(--l-color-complementary);
+}
+.card-open-project::after {
+  content: "abrir projeto";
 }
 
 .card-image {
