@@ -1,5 +1,5 @@
 :root {
-  --left-menu-width: 25rem;
+  --left-menu-width: 20rem;
 }
 
 .page-header {
@@ -13,8 +13,18 @@
 body {
   background-color: var(--clr-primary);
 }
+/* Page */
+.page {
+  position: relative;
 
+  height: calc(100% - var(--page-header-height));
+  width: 100%;
+}
+
+/* Left Menu */
 .left-menu {
+  z-index: 10;
+
   --menu-footer-height: var(--page-header-height);
   white-space: nowrap;
 
@@ -27,19 +37,19 @@ body {
   padding-bottom: 5rem;
 
   padding: var(--padding);
-  width: var(--left-menu-width);
-  height: calc(100% - var(--page-header-height));
+  width: 0;
+  height: 100%;
   background-color: var(--clr-main-darker);
 
   transition: var(--transition-medium);
 
   overflow-x: hidden;
-  overflow-y: auto;
+  overflow-y: hidden;
 }
 
-.left-menu.closed {
-  width: 0;
-  overflow-y: hidden;
+.left-menu.open {
+  width: var(--left-menu-width);
+  overflow-y: auto;
 }
 
 .menu-container {
@@ -92,4 +102,29 @@ body {
   width: 100%;
 
   background-color: var(--clr-main-dark);
+}
+/* Main Page */
+main {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  height: 100%;
+  width: 100%;
+}
+.left-menu.open + main {
+  overflow-y: hidden;
+}
+main::before {
+  position: absolute;
+  content: "";
+
+  width: 100%;
+  height: 100%;
+
+  transition: background-color var(--transition-fast);
+}
+.left-menu.open + main::before {
+  background-color: rgba(0, 0, 0, 0.5);
 }

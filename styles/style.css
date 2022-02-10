@@ -67,6 +67,19 @@ a {
 
 body {
   text-transform: uppercase;
+
+  transition: var(--transition-medium);
+}
+body.light-mode {
+  --clr-primary-light: rgb(60, 60, 60);
+  --clr-complementary: rgb(40, 40, 40);
+  --clr-complementary-dark: rgb(20, 20, 20);
+  --clr-complementary-darker: rgb(10, 10, 10);
+
+  --clr-primary-light: rgb(255, 255, 255);
+  --clr-primary: rgb(238, 238, 238);
+  --clr-primary-dark: rgb(192, 192, 192);
+  --clr-primary-darker: rgb(170, 170, 170);
 }
 
 #page-header {
@@ -83,7 +96,7 @@ body {
   text-align: center;
 
   background-color: var(--clr-main-dark);
-  color: var(--clr-complementary);
+  color: white;
 }
 
 #page-header-left,
@@ -129,7 +142,7 @@ body {
   height: 100%;
   width: 100%;
 
-  color: var(--clr-complementary);
+  color: white;
 }
 
 .icon {
