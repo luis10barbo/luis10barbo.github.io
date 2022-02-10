@@ -8,22 +8,6 @@ body {
   font-size: 2em;
 }
 
-#page-title {
-  font-size: 2.5em;
-  /* border-radius: var(--border-small); */
-
-  margin-bottom: 3rem;
-
-  padding: 1.5rem;
-
-  font-weight: 600;
-
-  text-align: center;
-
-  background-color: var(--clr-main);
-  color: var(--clr-complementary);
-}
-
 main {
   width: fit-content;
 

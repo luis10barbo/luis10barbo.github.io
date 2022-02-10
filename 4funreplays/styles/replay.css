@@ -1,0 +1,95 @@
+:root {
+  --left-menu-width: 25rem;
+}
+
+.page-header {
+  width: 100%;
+  height: var(--page-header-height);
+
+  background-color: var(--clr-main-dark);
+  color: var(--clr-complementary);
+}
+
+body {
+  background-color: var(--clr-primary);
+}
+
+.left-menu {
+  --menu-footer-height: var(--page-header-height);
+  white-space: nowrap;
+
+  --menu-item-height: 5rem;
+  --item-gap: 1rem;
+
+  position: absolute;
+
+  --padding: 0rem;
+  padding-bottom: 5rem;
+
+  padding: var(--padding);
+  width: var(--left-menu-width);
+  height: calc(100% - var(--page-header-height));
+  background-color: var(--clr-main-darker);
+
+  transition: var(--transition-medium);
+
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.left-menu.closed {
+  width: 0;
+  overflow-y: hidden;
+}
+
+.menu-container {
+  list-style-type: none;
+
+  width: 100%;
+  height: calc(100% - var(--menu-footer-height));
+}
+.menu-container::marker {
+  display: none;
+}
+
+.menu-item,
+.menu-item a {
+  color: white;
+  width: 100%;
+  height: var(--menu-item-height);
+}
+.menu-item:hover {
+  background-color: var(--clr-main);
+}
+
+.menu-item a {
+  display: flex;
+
+  justify-content: left;
+  align-items: center;
+
+  gap: var(--item-gap);
+
+  padding: 0 var(--item-gap);
+}
+
+.menu-icon-button {
+  justify-content: left;
+
+  gap: 2rem;
+}
+
+.left-menu-footer {
+  --button-size: 4rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  gap: 2rem;
+
+  height: var(--menu-footer-height);
+  width: 100%;
+
+  background-color: var(--clr-main-dark);
+}
